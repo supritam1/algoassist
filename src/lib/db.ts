@@ -6,15 +6,15 @@ if(!mongo_Url){
 }
 let cache=global.mongoose
 if(!cache){
-   cache = global.mongoose={conn:null,promise:null}
+   cache= global.mongoose={conn:null,promise:null}
 }
 
-const connectDb = async()=>{
+const connectDb=async ()=>{
 if(cache.conn){
     return cache.conn
 }
 if(!cache.promise){
-    cache.promise = connect(mongo_Url!).then((c)=>c.connection)
+    cache.promise=connect(mongo_Url!).then((c)=>c.connection)
 }
 
 try {

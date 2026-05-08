@@ -15,8 +15,7 @@ export async function POST(req:NextRequest) {
         const settings=await Settings.findOneAndUpdate(
             {ownerId},
             {ownerId, businessName,supportEmail,knowledge},
-            {returnDocument: "after",
-             upsert:true}
+            {new:true,upsert:true}
         )
         return NextResponse.json(settings)
     } catch (error) {
@@ -26,3 +25,5 @@ export async function POST(req:NextRequest) {
             )
     }
 }
+
+

@@ -41,7 +41,7 @@ const navigate=useRouter()
     ]
     const handleLogOut=async ()=>{
         try {
-            await axios.get("/api/auth/logout")
+            const result=await axios.get("/api/auth/logout")
             window.location.href = "/"
         } catch (error) {
             console.log(error)
@@ -57,7 +57,7 @@ const navigate=useRouter()
                 className='fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-zinc-200'
             >
                 <div className='max-w-7xl mx-auto px-6 h-16 flex items-center justify-between'>
-                    <div className='text-lg font-semibold tracking-tight cursor-default select-none'>AlgoAssist <span className='text-zinc-400 '>AI</span></div>
+                    <div className='text-lg font-semibold tracking-tight'>Support <span className='text-zinc-400'>AI</span></div>
                     {email ? <div className='relative' ref={popupRef}>
                         <button className='w-10 h-10 rounded-full
                   bg-black text-white
@@ -89,7 +89,6 @@ const navigate=useRouter()
                 bg-black text-white text-sm font-medium
                 hover:bg-zinc-800 transition
                 disabled:opacity-60
-                cursor-pointer
                 flex items-center gap-2'
                         onClick={handleLogin}
                         disabled={loading}
@@ -105,7 +104,7 @@ const navigate=useRouter()
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
                     >
-                        <h1 className='text-4xl md:text-5xl font-semibold leading-tight '>
+                        <h1 className='text-4xl md:text-5xl font-semibold leading-tight'>
                             AI Customer Support <br />
                             Built for Modern Websites
                         </h1>
@@ -175,7 +174,7 @@ const navigate=useRouter()
                         transition={{ duration: 0.5 }}
                         className='text-3xl font-semibold text-center'
                     >
-                        Why Businesses Choose AlgoAssistAI
+                        Why Businesses Choose SupportAI
                     </motion.h2>
 
                     <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-10'>
@@ -202,7 +201,7 @@ const navigate=useRouter()
                 </div>
             </section>
             <footer className='py-10 text-center text-sm text-zinc-500'>
-                &copy; {new Date().getFullYear()} AlgoAssistAI. All rights reserved.
+                &copy; {new Date().getFullYear()} SupportAI. All rights reserved.
             </footer>
         </div>
     )
