@@ -52,7 +52,7 @@ if(ownerId){
                 className='fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-zinc-200'
             >
                 <div className='max-w-7xl mx-auto px-6 h-16 flex items-center justify-between'>
-                    <div className='text-lg font-semibold tracking-tight' onClick={() => navigate.push("/")}>Support <span className='text-zinc-400'>AI</span></div>
+                    <div className='text-lg font-semibold tracking-tight' onClick={() => navigate.push("/")}>AlgoAssist <span className='text-zinc-400'>AI</span></div>
                     <button className='px-4 py-2 rounded-lg border border-zinc-300 text-sm hover:bg-zinc-100 transition' onClick={()=>navigate.push("/embed")}>Embed ChatBot</button>
                 </div>
             </motion.div>
